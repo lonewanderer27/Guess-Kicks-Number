@@ -10,6 +10,7 @@
     android:background="@color/material_dynamic_neutral30"
     tools:context=".GKN_MainActivity">
     <EditText
+        android:textColor="@color/white"
         android:textColorHint="@color/white"
         android:inputType="number"
         android:layout_marginBottom="20dp"
