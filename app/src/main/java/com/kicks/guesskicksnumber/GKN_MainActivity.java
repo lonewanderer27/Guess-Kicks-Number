@@ -3,6 +3,7 @@ package com.kicks.guesskicksnumber;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -47,11 +48,16 @@ public class GKN_MainActivity extends AppCompatActivity {
                 Reset();
             }
         });
+
+        // Generate a random number
+        correctGuess = new Random().nextInt(100) + 1;
     }
 
     public void Guess() {
         // Get the user input
         String userGuessStr = UserGuess.getText().toString();
+        Log.i("userGuessStr", userGuessStr);
+
 
         // Check if the user input is empty
         if (userGuessStr.isEmpty()) {
@@ -62,6 +68,7 @@ public class GKN_MainActivity extends AppCompatActivity {
 
         int userGuess = Integer.parseInt(userGuessStr);
 
+        Log.i("correctGuess", correctGuess.toString());
         // Check if the user guess is correct
         if (userGuess == correctGuess) {
             // If the user guess is correct, display the correct guess
@@ -80,7 +87,7 @@ public class GKN_MainActivity extends AppCompatActivity {
             ResetBtn.setEnabled(true);
         } else {
             // If the user guess is wrong, display a toast as a hint
-            if (userGuess > correctGuess) {
+            if (userGuess < correctGuess) {
                 Toast.makeText(this, "Higher!", Toast.LENGTH_SHORT).show();
             } else {
                 Toast.makeText(this, "Lower!", Toast.LENGTH_SHORT).show();
