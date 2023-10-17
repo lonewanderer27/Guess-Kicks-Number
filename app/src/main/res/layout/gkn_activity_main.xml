@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="50dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical"
+    android:background="@color/material_dynamic_neutral30"
+    tools:context=".GKN_MainActivity">
+    <EditText
+        android:textColorHint="@color/white"
+        android:inputType="number"
+        android:layout_marginBottom="20dp"
+        android:textAlignment="center"
+        android:textSize="38sp"
+        android:hint="Enter number"
+        android:id="@+id/UserGuess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </EditText>
+    <Button
+        android:backgroundTint="#357385"
+        android:textSize="40sp"
+        android:id="@+id/GuessButton"
+        android:text="Guess"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <Button
+        android:layout_marginTop="10dp"
+        android:enabled="false"
+        android:textSize="40sp"
+        android:id="@+id/ResetButton"
+        android:text="Restart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </Button>
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:layout_marginTop="50dp"
+        android:id="@+id/Attempts"
+        android:text="Attempts:"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:id="@+id/CorrectGuess"
+        android:text="Correct Number:"
+        android:textSize="30sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
